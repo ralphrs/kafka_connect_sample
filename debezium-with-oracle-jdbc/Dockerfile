@@ -33,6 +33,6 @@ RUN microdnf -y install libaio && microdnf clean all
 USER kafka
 # Deploy Oracle client and drivers
 
-COPY oracle_instantclient/* $INSTANT_CLIENT_DIR
-COPY oracle_instantclient/xstreams.jar /kafka/libs
-COPY oracle_instantclient/ojdbc8.jar /kafka/libs
+COPY /opt/oracle/instantclient_21_8/* $INSTANT_CLIENT_DIR
+COPY /opt/oracle/instantclient_21_8/xstreams.jar /kafka/libs
+COPY /opt/oracle/instantclient_21_8/ojdbc8.jar /kafka/libs
